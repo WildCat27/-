@@ -1,0 +1,5 @@
+C:\Users\Диана\Desktop\Алгоритмы\MyGraph\MyGraph\bin\Debug\MyGraph.dll
+C:\Users\Диана\Desktop\Алгоритмы\MyGraph\MyGraph\bin\Debug\MyGraph.pdb
+C:\Users\Диана\Desktop\Алгоритмы\MyGraph\MyGraph\obj\Debug\MyGraph.csproj.CoreCompileInputs.cache
+C:\Users\Диана\Desktop\Алгоритмы\MyGraph\MyGraph\obj\Debug\MyGraph.dll
+C:\Users\Диана\Desktop\Алгоритмы\MyGraph\MyGraph\obj\Debug\MyGraph.pdb
