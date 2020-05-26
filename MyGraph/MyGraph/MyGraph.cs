@@ -7,7 +7,64 @@ using System.Threading.Tasks;
 
 namespace MyCollections
 {
-    abstract class Algorithms
+    public static class Extensions
+    {
+        public static void Fill<T>(this T[] mas, T value)
+        {
+            for (int i = 0; i < mas.Length; i++)
+                mas[i] = value;
+        }
+
+        public static int[] HungarianAlgorithm(this int[,] Matrix)
+        {
+            int[] u = new int[Matrix.GetLongLength(0) + 1];
+            int[] v = new int[Matrix.GetLongLength(1) + 1];
+            int[] p = new int[Matrix.GetLongLength(1) + 1];
+            int[] way = new int[Matrix.GetLongLength(1) + 1];
+            for (int i = 1; i <= Matrix.GetLongLength(0); ++i)
+            {
+                p[0] = i;
+                int j0 = 0;
+                int[] minv = new int[Matrix.GetLongLength(1) + 1];
+                minv.Fill(int.MaxValue);
+                bool[] used = new bool[Matrix.GetLongLength(1) + 1];
+                used.Fill(false);
+                do
+                {
+                    used[j0] = true;
+                    int i0 = p[j0], delta = int.MaxValue, j1 = 0;
+                    for (int j = 1; j <= Matrix.GetLongLength(1); ++j)
+                        if (!used[j])
+                        {
+                            int cur = Matrix[i0 - 1,j - 1] - u[i0] - v[j];
+                            if (cur < minv[j])
+                            { minv[j] = cur; way[j] = j0; }
+                            if (minv[j] < delta)
+                            { delta = minv[j]; j1 = j; }
+                        }
+                    for (int j = 0; j <= Matrix.GetLongLength(1); ++j)
+                        if (used[j])
+                        { u[p[j]] += delta; v[j] -= delta; }
+                        else
+                            minv[j] -= delta;
+                    j0 = j1;
+                } while (p[j0] != 0);
+                do
+                {
+                    int j1 = way[j0];
+                    p[j0] = p[j1];
+                    j0 = j1;
+                } while (j0 > 0);
+            }
+            int[] ans = new int[Matrix.GetLongLength(0) + 1];
+            for (int j = 1; j <= Matrix.GetLongLength(1); ++j)
+                ans[p[j]] = j;
+            return ans;
+        }
+
+    }
+
+    public class Algorithms
     {
         public static void fill<T>(T[] mas, T value)
         {
@@ -17,7 +74,7 @@ namespace MyCollections
 
         private const int inf = int.MaxValue;
 
-        public void HungarianAlgorithm(DataGridView Matrix, RichTextBox textBox)
+        public static void HungarianAlgorithm(DataGridView Matrix, RichTextBox textBox)
         {
             int[] u = new int[Matrix.Rows.Count + 1];
             int[] v = new int[Matrix.ColumnCount + 1];
@@ -69,8 +126,8 @@ namespace MyCollections
 
     public class Vertex
     {
-        public string Name;
-        public string Mark;
+        public string Name { get; set; }
+        public string Mark { get; set; }
         public List<Vertex> Adjacent = new List<Vertex>();
         public Vertex(string name) => Name = name;
         public Vertex() { }
@@ -78,7 +135,7 @@ namespace MyCollections
 
     public class Edge
     {
-        public int Weight;
+        public int Weight { get; set; }
         public Vertex Begin, End;
         public Edge(Vertex begin, Vertex end)
         {
@@ -91,7 +148,7 @@ namespace MyCollections
     {
         public List<Vertex> Vertices = new List<Vertex>();
         public List<Edge> Edges = new List<Edge>();
-        bool isDirected;
+        public bool isDirected { get; private set; }
 
         public Graph() { }
 
@@ -147,7 +204,13 @@ namespace MyCollections
             }
         }
 
-        
+        public List<Vertex> VertexAddition(List<Vertex> vertices)
+        {
+            List<Vertex> addition = new List<Vertex>();
+            foreach (Vertex vertex in Vertices)
+                if (!vertices.Contains(vertex)) addition.Add(vertex);
+            return addition;
+        }
 
         public List<Vertex> DFS(int number)
         {
@@ -226,12 +289,11 @@ namespace MyCollections
             }
             return CyclesList;
         }
-
         public List<List<Vertex>> ShortestWay(Vertex Start, Vertex Finish)
         {
             List<Vertex> bfs = BFS(Start);
             int[] Marks = new int[Vertices.Count];
-            Algorithms.fill(Marks, -1);
+            Marks.Fill(-1);
             Marks[Vertices.IndexOf(Start)] = 0;
             if (bfs.IndexOf(Finish) == -1) return null;
             else
@@ -587,6 +649,7 @@ namespace MyCollections
                 }
                 return tree;
             }
+            
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Work_with_graphs
 {
-    partial class Task4
+    partial class Task5
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Task4));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Task5));
             this.graph_textbox = new System.Windows.Forms.RichTextBox();
             this.coverages_textbox = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,6 +40,10 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.label3 = new System.Windows.Forms.Label();
+            this.start_textbox = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.finish_textbox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // graph_textbox
@@ -57,9 +61,9 @@
             this.coverages_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.coverages_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.coverages_textbox.ForeColor = System.Drawing.Color.Black;
-            this.coverages_textbox.Location = new System.Drawing.Point(360, 70);
+            this.coverages_textbox.Location = new System.Drawing.Point(30, 530);
             this.coverages_textbox.Name = "coverages_textbox";
-            this.coverages_textbox.Size = new System.Drawing.Size(260, 350);
+            this.coverages_textbox.Size = new System.Drawing.Size(400, 100);
             this.coverages_textbox.TabIndex = 1;
             this.coverages_textbox.Text = "";
             // 
@@ -81,11 +85,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(360, 15);
+            this.label2.Location = new System.Drawing.Point(370, 210);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 24);
+            this.label2.Size = new System.Drawing.Size(205, 24);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Наибольшие";
+            this.label2.Text = "Введить начальную и";
             // 
             // menu
             // 
@@ -106,7 +110,7 @@
             this.get_result.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.get_result.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.get_result.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.get_result.Location = new System.Drawing.Point(470, 450);
+            this.get_result.Location = new System.Drawing.Point(470, 530);
             this.get_result.Margin = new System.Windows.Forms.Padding(5);
             this.get_result.Name = "get_result";
             this.get_result.Size = new System.Drawing.Size(150, 40);
@@ -120,7 +124,7 @@
             this.open_graph.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.open_graph.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.open_graph.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.open_graph.Location = new System.Drawing.Point(30, 500);
+            this.open_graph.Location = new System.Drawing.Point(370, 130);
             this.open_graph.Margin = new System.Windows.Forms.Padding(5);
             this.open_graph.Name = "open_graph";
             this.open_graph.Size = new System.Drawing.Size(180, 40);
@@ -134,7 +138,7 @@
             this.save_graph.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.save_graph.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save_graph.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.save_graph.Location = new System.Drawing.Point(30, 450);
+            this.save_graph.Location = new System.Drawing.Point(370, 70);
             this.save_graph.Margin = new System.Windows.Forms.Padding(5);
             this.save_graph.Name = "save_graph";
             this.save_graph.Size = new System.Drawing.Size(180, 40);
@@ -153,18 +157,66 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(360, 40);
+            this.label3.Location = new System.Drawing.Point(370, 240);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 24);
+            this.label3.Size = new System.Drawing.Size(229, 24);
             this.label3.TabIndex = 13;
-            this.label3.Text = "вершинные покрытия";
+            this.label3.Text = "конечную вершины пути";
             // 
-            // Task4
+            // start_textbox
+            // 
+            this.start_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.start_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.start_textbox.Location = new System.Drawing.Point(470, 300);
+            this.start_textbox.Name = "start_textbox";
+            this.start_textbox.Size = new System.Drawing.Size(120, 40);
+            this.start_textbox.TabIndex = 14;
+            this.start_textbox.Text = "";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(370, 310);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 24);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Начало";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(374, 396);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 24);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Конец";
+            // 
+            // finish_textbox
+            // 
+            this.finish_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.finish_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.finish_textbox.Location = new System.Drawing.Point(470, 380);
+            this.finish_textbox.Name = "finish_textbox";
+            this.finish_textbox.Size = new System.Drawing.Size(120, 40);
+            this.finish_textbox.TabIndex = 17;
+            this.finish_textbox.Text = "";
+            // 
+            // Task5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(642, 653);
+            this.Controls.Add(this.finish_textbox);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.start_textbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.save_graph);
             this.Controls.Add(this.open_graph);
@@ -174,7 +226,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.coverages_textbox);
             this.Controls.Add(this.graph_textbox);
-            this.Name = "Task4";
+            this.Name = "Task5";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Task3";
             this.ResumeLayout(false);
@@ -195,5 +247,9 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RichTextBox start_textbox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RichTextBox finish_textbox;
     }
 }

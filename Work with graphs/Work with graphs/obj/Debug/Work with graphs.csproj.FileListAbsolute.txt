@@ -16,3 +16,22 @@ C:\Users\Диана\Desktop\Алгоритмы\Work with graphs\Work with graphs
 C:\Users\Диана\Desktop\Алгоритмы\Work with graphs\Work with graphs\obj\Debug\Work_with_graphs.Task4.resources
 C:\Users\Диана\Desktop\Алгоритмы\Work with graphs\Work with graphs\bin\Debug\MyGraph.dll
 C:\Users\Диана\Desktop\Алгоритмы\Work with graphs\Work with graphs\bin\Debug\MyGraph.pdb
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\bin\Debug\Work with graphs.exe.config
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\bin\Debug\Work with graphs.exe
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\bin\Debug\Work with graphs.pdb
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\bin\Debug\MaterialSkin.dll
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\bin\Debug\MyGraph.dll
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\bin\Debug\MyGraph.pdb
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\obj\Debug\Work with graphs.csprojAssemblyReference.cache
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\obj\Debug\Work_with_graphs.Form1.resources
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\obj\Debug\Work_with_graphs.Properties.Resources.resources
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\obj\Debug\Work_with_graphs.Task1.resources
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\obj\Debug\Work_with_graphs.Task2.resources
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\obj\Debug\Work_with_graphs.Task3.resources
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\obj\Debug\Work_with_graphs.Task4.resources
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\obj\Debug\Work with graphs.csproj.GenerateResource.cache
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\obj\Debug\Work with graphs.csproj.CoreCompileInputs.cache
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\obj\Debug\Work with graphs.csproj.CopyComplete
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\obj\Debug\Work with graphs.exe
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\obj\Debug\Work with graphs.pdb
+C:\Users\Диана\Desktop\Алгоритмы\master\Work with graphs\Work with graphs\obj\Debug\Work_with_graphs.Task5.resources

@@ -46,7 +46,7 @@ namespace Work_with_graphs
    */
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void algebraic_addition_Click(object sender, EventArgs e)
         {
             Form task1 = new Task1();
             task1.Location = this.Location;
@@ -57,10 +57,43 @@ namespace Work_with_graphs
         }
 
 
-        private void button2_Click(object sender, EventArgs e)
+        private void hungarian_algorithm_Click(object sender, EventArgs e)
         {
-            
+            Form task2 = new Task2();
+            task2.Location = this.Location;
+            task2.Show();
+            task2.FormClosed += (object s, FormClosedEventArgs ev) => { this.Location = task2.Location; this.Show(); };
+            this.Hide();
         }
+
+        private void vertex_coverage_Click(object sender, EventArgs e)
+        {
+            Form task4 = new Task4();
+            task4.Location = this.Location;
+            task4.Show();
+            task4.FormClosed += (object s, FormClosedEventArgs ev) => { this.Location = task4.Location; this.Show(); };
+            this.Hide();
+        }
+
+        private void simple_cycles_Click(object sender, EventArgs e)
+        {
+            Form task3 = new Task3();
+            task3.Location = this.Location;
+            task3.Show();
+            task3.FormClosed += (object s, FormClosedEventArgs ev) => { this.Location = task3.Location; this.Show(); };
+            this.Hide();
+        }
+
+        private void shortest_way_Click(object sender, EventArgs e)
+        {
+            Form task5 = new Task5
+                ();
+            task5.Location = this.Location;
+            task5.Show();
+            task5.FormClosed += (object s, FormClosedEventArgs ev) => { this.Location = task5.Location; this.Show(); };
+            this.Hide();
+        }
+
         /*
 void matrix_naznach()
 {

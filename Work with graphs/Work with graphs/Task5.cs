@@ -11,9 +11,9 @@ using MyCollections;
 
 namespace Work_with_graphs
 {
-    public partial class Task3 : Form
+    public partial class Task5 : Form
     {
-        public Task3()
+        public Task5()
         {
             InitializeComponent();
         }
@@ -43,12 +43,14 @@ namespace Work_with_graphs
         {
             Graph graph = new Graph();
             graph.EnterAdjacencyMatrix(graph_textbox.Text);
-            List<List<Vertex>> cycles = graph.SimpleCycles();
-            foreach (List<Vertex> cycle in cycles)
+            int start = Convert.ToInt32(start_textbox.Text) - 1;
+            int finish = Convert.ToInt32(finish_textbox.Text) - 1;
+            List<List<Vertex>> ways = graph.ShortestWay(graph.Vertices[start],graph.Vertices[finish]);
+            foreach (List<Vertex> way in ways)
             {
-                foreach (Vertex vertex in cycle)
-                    cycles_textbox.AppendText(vertex.Name + " ");
-                cycles_textbox.AppendText("\n");
+                foreach (Vertex vertex in way)
+                    coverages_textbox.AppendText(vertex.Name + " ");
+                coverages_textbox.AppendText("\n");
             }
         }
 
@@ -56,5 +58,6 @@ namespace Work_with_graphs
         {
             this.Close();
         }
+
     }
 }
