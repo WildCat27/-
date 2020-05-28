@@ -136,7 +136,8 @@ namespace MyCollections
     public class Edge
     {
         public int Weight { get; set; }
-        public Vertex Begin, End;
+        public Vertex Begin { get; private set; }
+        public Vertex End { get; private set; }
         public Edge(Vertex begin, Vertex end)
         {
             Begin = begin;
