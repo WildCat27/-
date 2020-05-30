@@ -210,7 +210,8 @@ namespace MyCollections
             List<Vertex> addition = new List<Vertex>();
             foreach (Vertex vertex in Vertices)
                 if (!vertices.Contains(vertex)) addition.Add(vertex);
-            return addition;
+            if (addition.Count == 0) return null;
+            else return addition;
         }
 
         public List<Vertex> DFS(int number)
@@ -288,6 +289,7 @@ namespace MyCollections
                     }
                 }
             }
+            if (CyclesList.Count == 0) return null;
             return CyclesList;
         }
         public List<List<Vertex>> ShortestWay(Vertex Start, Vertex Finish)
@@ -329,6 +331,7 @@ namespace MyCollections
                     }
                 }
                 foreach (List<Vertex> way in Ways) way.Reverse();
+                if (Ways.Count == 0) return null;
                 return Ways;
             }
         }

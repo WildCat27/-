@@ -25,7 +25,7 @@ namespace Work_with_graphs
             // получаем выбранный файл
             string filename = openFileDialog1.FileName;
             // читаем файл
-            graph_textbox.AppendText(filename);
+            graph_textbox.AppendText(System.IO.File.ReadAllText(filename));
         }
 
         private void save_graph_Click(object sender, EventArgs e)
@@ -46,11 +46,12 @@ namespace Work_with_graphs
             int start = Convert.ToInt32(start_textbox.Text) - 1;
             int finish = Convert.ToInt32(finish_textbox.Text) - 1;
             List<List<Vertex>> ways = graph.ShortestWay(graph.Vertices[start],graph.Vertices[finish]);
-            foreach (List<Vertex> way in ways)
+            if (ways == null) ways_textbox.AppendText("не найдено");
+            else foreach (List<Vertex> way in ways)
             {
                 foreach (Vertex vertex in way)
-                    coverages_textbox.AppendText(vertex.Name + " ");
-                coverages_textbox.AppendText("\n");
+                    ways_textbox.AppendText(vertex.Name + " ");
+                ways_textbox.AppendText("\n");
             }
         }
 

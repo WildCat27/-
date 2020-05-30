@@ -8,4 +8,3 @@ C:\Users\Диана\Desktop\Алгоритмы\master\MyGraph\MyGraph\bin\Debug\
 C:\Users\Диана\Desktop\Алгоритмы\master\MyGraph\MyGraph\obj\Debug\MyGraph.csproj.CoreCompileInputs.cache
 C:\Users\Диана\Desktop\Алгоритмы\master\MyGraph\MyGraph\obj\Debug\MyGraph.dll
 C:\Users\Диана\Desktop\Алгоритмы\master\MyGraph\MyGraph\obj\Debug\MyGraph.pdb
-C:\Users\Диана\Desktop\Алгоритмы\master\MyGraph\MyGraph\obj\Debug\MyGraph.csprojAssemblyReference.cache

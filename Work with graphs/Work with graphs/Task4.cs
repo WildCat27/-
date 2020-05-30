@@ -25,7 +25,7 @@ namespace Work_with_graphs
             // получаем выбранный файл
             string filename = openFileDialog1.FileName;
             // читаем файл
-            graph_textbox.AppendText(filename);
+            graph_textbox.AppendText(System.IO.File.ReadAllText(filename));
         }
 
         private void save_graph_Click(object sender, EventArgs e)
@@ -44,7 +44,8 @@ namespace Work_with_graphs
             Graph graph = new Graph();
             graph.EnterAdjacencyMatrix(graph_textbox.Text);
             List<List<Vertex>> coverages = graph.SmallestVertexCoverage();
-            foreach (List<Vertex> coverage in coverages)
+            if (coverages == null) coverages_textbox.AppendText("не найдено");
+            else foreach (List<Vertex> coverage in coverages)
             {
                 foreach (Vertex vertex in coverage)
                     coverages_textbox.AppendText(vertex.Name + " ");

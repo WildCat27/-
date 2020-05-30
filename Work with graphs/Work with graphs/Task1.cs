@@ -55,8 +55,9 @@ namespace Work_with_graphs
             foreach (string vertex_number in vertexArray)
                 Clique.Add(graph.Vertices[Convert.ToInt32(vertex_number) - 1]);
             List<Vertex> Addition = graph.VertexAddition(Clique);
-            foreach (Vertex vertex in Addition)
-                addition_textbox.AppendText(vertex.Name + " ");
+            if (Addition == null) addition_textbox.AppendText("не найдено");
+            else foreach (Vertex vertex in Addition)
+                    addition_textbox.AppendText(vertex.Name + " ");
         }
     }
 }

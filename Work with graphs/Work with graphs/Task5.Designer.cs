@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Task5));
             this.graph_textbox = new System.Windows.Forms.RichTextBox();
-            this.coverages_textbox = new System.Windows.Forms.RichTextBox();
+            this.ways_textbox = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.menu = new System.Windows.Forms.Button();
@@ -56,16 +56,16 @@
             this.graph_textbox.TabIndex = 0;
             this.graph_textbox.Text = "";
             // 
-            // coverages_textbox
+            // ways_textbox
             // 
-            this.coverages_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.coverages_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.coverages_textbox.ForeColor = System.Drawing.Color.Black;
-            this.coverages_textbox.Location = new System.Drawing.Point(30, 530);
-            this.coverages_textbox.Name = "coverages_textbox";
-            this.coverages_textbox.Size = new System.Drawing.Size(400, 100);
-            this.coverages_textbox.TabIndex = 1;
-            this.coverages_textbox.Text = "";
+            this.ways_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ways_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ways_textbox.ForeColor = System.Drawing.Color.Black;
+            this.ways_textbox.Location = new System.Drawing.Point(30, 530);
+            this.ways_textbox.Name = "ways_textbox";
+            this.ways_textbox.Size = new System.Drawing.Size(400, 100);
+            this.ways_textbox.TabIndex = 1;
+            this.ways_textbox.Text = "";
             // 
             // label1
             // 
@@ -224,7 +224,7 @@
             this.Controls.Add(this.menu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.coverages_textbox);
+            this.Controls.Add(this.ways_textbox);
             this.Controls.Add(this.graph_textbox);
             this.Name = "Task5";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
@@ -237,7 +237,7 @@
         #endregion
 
         private System.Windows.Forms.RichTextBox graph_textbox;
-        private System.Windows.Forms.RichTextBox coverages_textbox;
+        private System.Windows.Forms.RichTextBox ways_textbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button menu;
