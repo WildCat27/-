@@ -20,19 +20,15 @@ namespace Work_with_graphs
             saveFileDialog.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
         }
 
-        private void open_file_Click(object sender, EventArgs e)
+        private void open_graph_Click(object sender, EventArgs e)
         {
+            graph_textbox.Clear();
             if (openFileDialog.ShowDialog() == DialogResult.Cancel)
                 return;
             // получаем выбранный файл
             string filename = openFileDialog.FileName;
             // читаем файл
             graph_textbox.AppendText(System.IO.File.ReadAllText(filename));
-        }
-
-        private void menu_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void save_graph_Click(object sender, EventArgs e)
@@ -46,18 +42,32 @@ namespace Work_with_graphs
             MessageBox.Show("Файл сохранен");
         }
 
+
+        private void menu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void get_result_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph();
-            graph.EnterAdjacencyMatrix(graph_textbox.Text);
-            string[] vertexArray = clique_textbox.Text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            List<Vertex> Clique = new List<Vertex>();
-            foreach (string vertex_number in vertexArray)
-                Clique.Add(graph.Vertices[Convert.ToInt32(vertex_number) - 1]);
-            List<Vertex> Addition = graph.VertexAddition(Clique);
-            if (Addition == null) addition_textbox.AppendText("не найдено");
-            else foreach (Vertex vertex in Addition)
-                    addition_textbox.AppendText(vertex.Name + " ");
+            addition_textbox.Clear();
+            try
+            {
+                Graph graph = new Graph();
+                graph.EnterAdjacencyMatrix(graph_textbox.Text);
+                string[] vertexArray = clique_textbox.Text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                List<Vertex> Clique = new List<Vertex>();
+                foreach (string vertex_number in vertexArray)
+                    Clique.Add(graph.Vertices[Convert.ToInt32(vertex_number) - 1]);
+                List<Vertex> Addition = graph.VertexAddition(Clique);
+                if (Addition == null) addition_textbox.AppendText("не найдено");
+                else foreach (Vertex vertex in Addition)
+                        addition_textbox.AppendText(vertex.Name + " ");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

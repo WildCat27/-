@@ -55,7 +55,8 @@
             this.hungarian_algorithm.TabIndex = 0;
             this.hungarian_algorithm.Text = "Задача о назначениях венгерским алгоритмом";
             this.hungarian_algorithm.UseVisualStyleBackColor = false;
-            this.hungarian_algorithm.Click += new System.EventHandler(this.hungarian_algorithm_Click);
+            this.hungarian_algorithm.Tag = 2;
+            this.hungarian_algorithm.Click += new System.EventHandler(this.click);
             // 
             // algebraic_addition
             // 
@@ -74,7 +75,8 @@
             this.algebraic_addition.TabIndex = 1;
             this.algebraic_addition.Text = "Наименьшее покрытие алгебраического дополнения";
             this.algebraic_addition.UseVisualStyleBackColor = false;
-            this.algebraic_addition.Click += new System.EventHandler(this.algebraic_addition_Click);
+            this.algebraic_addition.Tag = 1;
+            this.algebraic_addition.Click += new System.EventHandler(this.click);
             // 
             // simple_cycles
             // 
@@ -93,7 +95,8 @@
             this.simple_cycles.TabIndex = 3;
             this.simple_cycles.Text = "Вывести все простые циклы";
             this.simple_cycles.UseVisualStyleBackColor = false;
-            this.simple_cycles.Click += new System.EventHandler(this.simple_cycles_Click);
+            this.simple_cycles.Tag = 3;
+            this.simple_cycles.Click += new System.EventHandler(this.click);
             // 
             // vertex_coverage
             // 
@@ -112,7 +115,8 @@
             this.vertex_coverage.TabIndex = 4;
             this.vertex_coverage.Text = "Построить наименьшее покрытие";
             this.vertex_coverage.UseVisualStyleBackColor = false;
-            this.vertex_coverage.Click += new System.EventHandler(this.vertex_coverage_Click);
+            this.vertex_coverage.Tag = 4;
+            this.vertex_coverage.Click += new System.EventHandler(this.click);
             // 
             // shortest_way
             // 
@@ -131,7 +135,8 @@
             this.shortest_way.TabIndex = 5;
             this.shortest_way.Text = "Алгоритм Ли нахождения кратчайшего пути";
             this.shortest_way.UseVisualStyleBackColor = false;
-            this.shortest_way.Click += new System.EventHandler(this.shortest_way_Click);
+            this.shortest_way.Tag = 5;
+            this.shortest_way.Click += new System.EventHandler(this.click);
             // 
             // pictureBox1
             // 

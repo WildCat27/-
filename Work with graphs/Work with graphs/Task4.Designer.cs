@@ -37,8 +37,8 @@
             this.get_result = new System.Windows.Forms.Button();
             this.open_graph = new System.Windows.Forms.Button();
             this.save_graph = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -143,10 +143,6 @@
             this.save_graph.UseVisualStyleBackColor = false;
             this.save_graph.Click += new System.EventHandler(this.save_graph_Click);
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -192,8 +188,8 @@
         private System.Windows.Forms.Button get_result;
         private System.Windows.Forms.Button open_graph;
         private System.Windows.Forms.Button save_graph;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.Label label3;
     }
 }

@@ -37,13 +37,14 @@
             this.get_result = new System.Windows.Forms.Button();
             this.open_graph = new System.Windows.Forms.Button();
             this.save_graph = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.label3 = new System.Windows.Forms.Label();
             this.start_textbox = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.finish_textbox = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // graph_textbox
@@ -147,10 +148,6 @@
             this.save_graph.UseVisualStyleBackColor = false;
             this.save_graph.Click += new System.EventHandler(this.save_graph_Click);
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -207,12 +204,25 @@
             this.finish_textbox.TabIndex = 17;
             this.finish_textbox.Text = "";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(30, 490);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(166, 24);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Кратчайший путь";
+            // 
             // Task5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(642, 653);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.finish_textbox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -228,7 +238,7 @@
             this.Controls.Add(this.graph_textbox);
             this.Name = "Task5";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Task3";
+            this.Text = "Задача 5";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,12 +254,13 @@
         private System.Windows.Forms.Button get_result;
         private System.Windows.Forms.Button open_graph;
         private System.Windows.Forms.Button save_graph;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox start_textbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RichTextBox finish_textbox;
+        private System.Windows.Forms.Label label6;
     }
 }

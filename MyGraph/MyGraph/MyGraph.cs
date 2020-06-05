@@ -173,8 +173,17 @@ namespace MyCollections
             string[] rows = str.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
             int name = 0;
             foreach (string row in rows)
+            {
+                foreach (char ch in row)
+                    if (ch != 48 && ch != 49) throw new Exception("Введены некорректные данные!");
+                
+            }
+            foreach (string row in rows)
+            {
+                if (row.Count() != rows.Count()) throw new Exception("Количество строк и столбцов должно быть одинаково!");
                 Vertices.Add(new Vertex((++name).ToString()));
-
+            }
+                
             int RowNumber = -1;
 
             foreach (string row in rows)
@@ -238,6 +247,7 @@ namespace MyCollections
 
         public List<Vertex> BFS(Vertex vertex)
         {
+            if (!Vertices.Contains(vertex)) throw new Exception("Граф не содержит такую вершину!");
             bool[] Marks = new bool[Vertices.Count];
             bool[] Inqueue = new bool[Vertices.Count];
             List<Vertex> bfs = new List<Vertex>();
@@ -294,6 +304,7 @@ namespace MyCollections
         }
         public List<List<Vertex>> ShortestWay(Vertex Start, Vertex Finish)
         {
+            if (!Vertices.Contains(Start) || !Vertices.Contains(Finish)) throw new Exception("Граф не содержит такую вершину!");
             List<Vertex> bfs = BFS(Start);
             int[] Marks = new int[Vertices.Count];
             Marks.Fill(-1);
@@ -324,7 +335,7 @@ namespace MyCollections
                         }
                     if (i == Way.Last().Adjacent.Count || Way.Last() == Start)
                     {
-                        if (i != Way.Last().Adjacent.Count) Ways.Add(Way.ToList());
+                        if (Way.Last() == Start) Ways.Add(Way.ToList());
                         Next = Vertices.IndexOf(Way.Last());
                         Way.Remove(Way.Last());
                         if (Way.Any()) Next = Way.Last().Adjacent.IndexOf(Vertices[Next]) + 1;

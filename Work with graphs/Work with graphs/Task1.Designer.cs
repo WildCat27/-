@@ -129,7 +129,7 @@
             this.open_graph.TabIndex = 6;
             this.open_graph.Text = "Загрузить граф";
             this.open_graph.UseVisualStyleBackColor = false;
-            this.open_graph.Click += new System.EventHandler(this.open_file_Click);
+            this.open_graph.Click += new System.EventHandler(this.open_graph_Click);
             // 
             // get_result
             // 
@@ -182,10 +182,6 @@
             this.label5.Size = new System.Drawing.Size(103, 24);
             this.label5.TabIndex = 10;
             this.label5.Text = "Результат";
-            // 
-            // openFileDialog
-            // 
-            this.openFileDialog.FileName = "graph";
             // 
             // save_graph
             // 
